@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Yihong 字体规范包说明页</title>
+    <style>
+        body {
+            font-family: "SourceHanSerifSC", serif;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+            font-weight: bold;
+            font-size: 28px;
+        }
+        h2 {
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
+            font-weight: normal;
+            font-size: 22px;
+            margin-top: 1.5em;
+        }
+        p, li {
+            font-family: "SourceHanSerifSC", serif;
+            font-size: 16px;
+        }
+        .english-sample {
+            font-family: "Times New Roman", serif;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            font-size: 90%;
+            color: #c7254e;
+        }
+    </style>
+</head>
+<body>
+    <h1>Yihong 字体规范包说明</h1>
+    <p>本字体规范包用于一鸿艺术项目输出，包括图文、PDF、PPT、图表、网页等。字体使用规范如下：</p>
+
+    <h2>一、中文字体规范</h2>
+    <ul>
+        <li><strong>中文标题：</strong>微软雅黑加粗（msyhbd.ttc）</li>
+        <li><strong>中文副标题：</strong>微软雅黑（msyh.ttc）</li>
+        <li><strong>中文正文：</strong>思源宋体（SourceHanSerifSC-Regular.ttf）</li>
+    </ul>
+
+    <h2>二、英文字体规范</h2>
+    <ul>
+        <li><strong>英文字体：</strong>Times New Roman（Regular/Bold/Italic）</li>
+    </ul>
+
+    <h2>三、字体示例</h2>
+    <p style="font-family: 'msyhbd'; font-weight: bold;">【标题示例】这是中文标题文字（微软雅黑加粗）</p>
+    <p style="font-family: 'msyh';">【副标题示例】这是副标题文字（微软雅黑）</p>
+    <p style="font-family: 'SourceHanSerifSC';">【正文示例】思源宋体用于中文正文排版，具备良好的阅读性与跨平台兼容性。</p>
+    <p class="english-sample">[English Sample] This is body text in Times New Roman Regular.</p>
+
+    <h2>四、引用方法（HTML 页面内嵌）</h2>
+    <pre><code>&lt;style&gt;
+@font-face {
+    font-family: 'SourceHanSerifSC';
+    src: url('fonts/SourceHanSerifSC-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'msyh';
+    src: url('fonts/msyh.ttc') format('truetype');
+}
+@font-face {
+    font-family: 'msyhbd';
+    src: url('fonts/msyhbd.ttc') format('truetype');
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url('fonts/TimesNewRoman-Regular.ttf') format('truetype');
+}
+&lt;/style&gt;
+</code></pre>
+
+    <h2>五、使用建议</h2>
+    <ul>
+        <li>所有 PDF 输出需嵌入字体，确保跨平台显示一致性</li>
+        <li>所有 PPT 制作需手动设置各级标题与正文字体</li>
+        <li>图表可使用微软雅黑加粗作为图例与标题，思源宋体作为辅助信息</li>
+    </ul>
+
+    <p>如需更新字体，请重新打包字体目录，并修改 index.html 引用路径。</p>
+</body>
+</html>
